@@ -7,4 +7,9 @@ body {
     border: 3px solid white;
     margin: 1em 5em 1em 5em;
     display: none;
+    padding: 2em;
+  }
+
+  #hours {
+    font-size: x-large;
   }
