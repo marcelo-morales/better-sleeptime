@@ -1,11 +1,18 @@
 const colors = [
-  "white",
-  "red",
-  "white",
-  "red",
-  "white",
-  "red",
+  "rgb, 168, 39, 254)",
+  "rgb(154, 3, 254)",
+  "rgb(150, 105, 254)",
+  "rgb(140, 140, 255)",
+  "rgb(187, 187, 255)",
+  "rgb(143, 254, 221)",
 ]
+
+function createWakeUpTimeLement(time, cycle) {
+  let elm = document.createElement("div");
+  elm.innerText = time;
+  elm.style.color = colors[cycle];
+  return elm;
+}
 
 function handleOnClick() {
     let output = document.querySelector(".output");
@@ -21,9 +28,8 @@ function handleOnClick() {
     // calculate sleep cycles!
     for (let i = 1; i <= 6; i++) {
       now.setMinutes(now.getMinutes() + 90);
-      let elem = document.createElement("div");
-      elem.innerText = now.toLocaleTimeString("en-US", { timeStyle: "short" }) ;
-      elem.style.color = colors[i];
-      hours.appendChild(elem);
+      const elm = createWakeUpTimeLement(now.toLocaleTimeString("en-US", { timeStyle: "short"}), i)
     } 
+
+    hours.appendChild(elem);
   }
