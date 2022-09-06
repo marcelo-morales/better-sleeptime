@@ -24,7 +24,9 @@ function handleOnClick() {
     let hh = document.getElementById("hh").value;
     let mm = document.getElementById("mm").value;
     let ampm = document.getElementById("ampm").value;
-    hh = ampm === "PM" ? hh + 12 : hh;
+    console.log({hh, mm, ampm});
+    hh = ampm === "PM" ? Number.parseInt(hh) + 12 : hh;
+    
     let now = new Date();
     now.setHours(hh);
     now.setMinutes(mm);
@@ -35,5 +37,5 @@ function handleOnClick() {
       const elm = createWakeUpTimeLement(now.toLocaleTimeString("en-US", { timeStyle: "short"}), i)
     } 
 
-    hours.appendChild(elem);
+    // hours.appendChild(elem);
   }

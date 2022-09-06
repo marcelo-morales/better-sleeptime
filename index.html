@@ -9,7 +9,7 @@
   <body>
     <h1>Sleeptime App</h1>
     <p>I want to fall sleep at...</p>
-    <select>
+    <select id="hh">
       <option>hh</option>
       <option>1</option>
       <option>2</option>
@@ -25,7 +25,7 @@
       <option>12</option> 
     </select>
 
-    <select>
+    <select id="mm">
       <option>mm</option>
       <option>05</option>
       <option>10</option>
@@ -40,14 +40,14 @@
       <option>55</option>
     </select>
 
-    <select>
+    <select id="ampm">
       <option>PM</option>
       <option>AM</option>
     </select>
     <br/>
     <br/>
 
-    <button onclick="handleOnClick();">Calculate</button>
+    <button onclick="handleOnClick();">Show</button>
     <div class="output">
       <p>
         You should try to wake up at one of the following times:
